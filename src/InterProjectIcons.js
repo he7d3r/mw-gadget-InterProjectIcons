@@ -4,8 +4,8 @@
  * @tracking: [[Special:GlobalUsage/User:Helder.wiki/Tools/InterProjectIcons.js]] ([[File:User:Helder.wiki/Tools/InterProjectIcons.js]])
  */
 /*jslint browser: true, white: true, plusplus: true*/
-/*global jQuery, mediaWiki */
-( function ( $, mw /* , undefined */ ) {
+/*global mediaWiki, jQuery */
+( function ( mw, $ ) {
 'use strict';
 
 var	i, wikis, canonicalPageName = 'Special:Watchlist',
@@ -94,4 +94,4 @@ $(function(){
 	$('#firstHeading').append( $span );
 });
 
-}( jQuery, mediaWiki ) );
+}( mediaWiki, jQuery ) );
