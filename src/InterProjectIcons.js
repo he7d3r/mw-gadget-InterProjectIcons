@@ -10,7 +10,7 @@
 
 var	i, wikis, canonicalPageName = 'Special:Watchlist',
 	lang = mw.config.get('wgContentLanguage'),
-	$ul = $('<ul id="imgs-projetos"></ul>');
+	$span = $('<span id="imgs-projetos" style="display: inline; margin-left: 1em; "></span>');
 wikis = [
 	{
 		name: 'Wikipédia',
@@ -58,7 +58,7 @@ wikis = [
 		img: 'b/bb/MediaWiki-notext.svg/22px-MediaWiki-notext.svg.png'
 	},
 	{
-		name: 'Commons',
+		name: 'Wikimedia Commons',
 		url: '//commons.wikimedia.org/wiki/',
 		img: '4/4a/Commons-logo.svg/16px-Commons-logo.svg.png'
 	},
@@ -83,18 +83,15 @@ if ($.inArray(mw.config.get('wgNamespaceNumber'), [-1, 2, 3, 8, 9]) !== -1) {
 }
 
 for(i=0; i<wikis.length; i++){
-	$ul.append(
-		$( '<li>' ).append(
-			$( '<a>' ).attr( {
-				href: wikis[i].url + canonicalPageName,
-				title: wikis[i].name
-			} ).addClass( wikis[i].name )
-		)
+	$span.append(
+		'<a href="' + wikis[i].url + canonicalPageName + '" title="' + wikis[i].name + '">' +
+		'<img src="//upload.wikimedia.org/wikipedia/commons/thumb/' +
+			wikis[i].img + '"></a> '
 	);
 }
 
 $(function(){
-	$('#firstHeading').append( $ul );
+	$('#firstHeading').append( $span );
 });
 
 }( mediaWiki, jQuery ) );
