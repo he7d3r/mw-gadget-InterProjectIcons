@@ -1,6 +1,7 @@
 /**
  * Add icons linking to the current page (or [[Special:Watchlist]]) in other wikis of the same language
- * @author: [[User:Helder.wiki]]
+ * @author: Helder (https://github.com/he7d3r)
+ * @license: CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0/>
  * @tracking: [[Special:GlobalUsage/User:Helder.wiki/Tools/InterProjectIcons.js]] ([[File:User:Helder.wiki/Tools/InterProjectIcons.js]])
  */
 /*jslint browser: true, white: true, plusplus: true*/
